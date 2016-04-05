@@ -174,10 +174,12 @@
             <option>-keep class com.squareup.haha.perflib.** { *; }</option>
             <option>-dontwarn javax.annotation.**</option>
             <option>-optimizations !code/allocation/variable</option>
+            <option>-keepattributes Exceptions,InnerClasses,Signature,Deprecated,SourceFile,LineNumberTable,*Annotation*,EnclosingMethod</option>
           </options>
           <libs>
             <lib>${java.home}/lib/rt.jar</lib>
           </libs>
+          <includeDependency>false</includeDependency>
         </configuration>
       </plugin>
     </plugins>
